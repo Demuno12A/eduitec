@@ -8,6 +8,9 @@ const restartBtn = document.getElementById('restartBtn');
 const exitBtn = document.getElementById('exitBtn');
 const scoreOElement = document.getElementById('scoreO');
 const scoreXElement = document.getElementById('scoreX');
+const exitModal = document.getElementById('exitModal');
+const yesBtn = document.getElementById('yesBtn');
+const noBtn = document.getElementById('noBtn');
 
 // Estado do jogo
 let currentPlayer = 'polvo'; // 🐙 começa
@@ -111,12 +114,26 @@ function restartGame() {
     gameOverScreen.style.display = 'none';
 }
 
-// Sair do jogo
+// Abrir modal de saída
 exitBtn.addEventListener('click', () => {
-    if (confirm("Tem certeza que deseja sair? Seu placar será perdido.")) {
-        // Redireciona ou fecha
-        alert("Obrigado por jogar! 🐠");
-        location.reload(); // ou window.close() se for standalone
+    exitModal.style.display = 'flex';
+});
+
+// Fechar modal com "Não"
+noBtn.addEventListener('click', () => {
+    exitModal.style.display = 'none';
+});
+
+// Sair com "Sim"
+yesBtn.addEventListener('click', () => {
+    alert("Obrigado por jogar! 🐠");
+    location.reload(); // ou redirecione para outra página
+});
+
+// Fechar modal clicando fora
+window.addEventListener('click', (e) => {
+    if (e.target === exitModal) {
+        exitModal.style.display = 'none';
     }
 });
 

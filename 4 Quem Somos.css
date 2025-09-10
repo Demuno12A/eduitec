@@ -5,7 +5,7 @@
   }
   
   body { /* Fundo da página */
-    background-image: url('./imagens/Fundo\ Mergulhador.jpg');
+    background-image: url('./imagens/Fundo\ Mergulhador.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -127,7 +127,7 @@ header nav a,
     left: -60px;
     top: 0;
     font-weight: bold;
-    color: #5c9bd3;
+    color: #062f52;
     font-size: 20px;
     letter-spacing: 2px;
   }
@@ -137,7 +137,7 @@ header nav a,
     font-weight: 800;
     line-height: 1.2;
     text-transform: lowercase;
-    color: #9dc6f2;
+    color: #062f52;
   }
   
   .text-area h1 span {
@@ -145,10 +145,10 @@ header nav a,
   }
   
   .text-area p {
-    font-size: 14px;
     color: #cccccc;
     margin-top: 20px;
     line-height: 1.6;
+    font-size: 20px;
   }
   
   .read-more {

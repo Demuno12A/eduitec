@@ -12,7 +12,7 @@
 
     <div class="game-container">
         <h1>🐙 Polvo vs 🐟 Peixe</h1>
-        
+
         <!-- Botão de Sair -->
         <button class="exit-btn" id="exitBtn">🚪 Sair</button>
 
@@ -37,9 +37,22 @@
 
         <div class="status" id="status">Vez do 🐙</div>
 
+        <!-- Game Over -->
         <div class="game-over" id="gameOver">
             <h2 id="winnerMessage">🎉 Vencedor!</h2>
             <button class="restart-btn" id="restartBtn">🔁 Jogar Novamente</button>
+        </div>
+
+        <!-- Modal de Confirmação de Saída -->
+        <div class="modal" id="exitModal">
+            <div class="modal-content">
+                <h2>🚪 Sair do Jogo?</h2>
+                <p>Tem certeza que deseja sair? Seu placar será perdido.</p>
+                <div class="modal-buttons">
+                    <button class="btn yes" id="yesBtn">Sim</button>
+                    <button class="btn no" id="noBtn">Não</button>
+                </div>
+            </div>
         </div>
     </div>
 
