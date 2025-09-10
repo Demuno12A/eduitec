@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body { /* Fundo da página */
+  background-image: url('./imagens/Fundo\ Baleia\ Home.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  position: relative;
+}
+
+header { 
+  position: absolute; /* em vez de fixed */
+  top: 15px; 
+  left: 0;
+  width: 100%;
+  padding: 20px 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Lora", serif;
+  font-size: 24px;  
+}
+
+header nav a,
+.nav-links li a,
+.navbar a {
+  font-size: 20px; 
+}
+
+.navbar {
+  width: 100%;
+  padding: 0.8rem 0;
+  position: absolute; /* em vez de fixed */
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: 1000;
+  font-family: "Lora", serif;
+}
+
+.nav-container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 1rem; 
+  font-family: "Lora", serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Lora", serif;
+  flex-wrap: nowrap; 
+  justify-content: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.063rem;
+  transition: color 0.3s ease;
+  font-family: "Lora", serif;
+  white-space: nowrap;
+}
+
+.nav-links li a:hover {
+  color: #04aeb4;
+  font-family: "Lora", serif;
+}
+
+.navbar ul {
+  list-style: none;
+  font-family: "Lora", serif;
+}
+
+.navbar li {
+  display: inline-block;
+  margin: 0 1.5rem;
+  font-family: "Lora", serif;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.063rem;
+  transition: color 0.3s ease;
+  font-family: "Lora", serif;
+}
+
+.logo { /*Animação da Logo*/
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  display: inline-block;
+  will-change: transform;
+}
+
+.logo:hover {
+  animation: bounceTwist 0.8s ease-in-out forwards;
+}
+
+@keyframes bounceTwist {
+  0% {
+      transform: scale(1) rotate(0deg) translateY(0);
+  }
+  15% {
+      transform: scale(1.1) rotate(3deg) translateY(-3px);
+  }
+  30% {
+      transform: scale(1.05) rotate(-3deg) translateY(-6px);
+  }
+  45% {
+      transform: scale(1.08) rotate(2deg) translateY(-3px);
+  }
+  60% {
+      transform: scale(1.03) rotate(-1deg) translateY(-1px);
+  }
+  75% {
+      transform: scale(1.02) rotate(0.5deg) translateY(-0.5px);
+  }
+  100% {
+      transform: scale(1) rotate(0deg) translateY(0);
+  }
+}
+
+main { /*Conteudo Principal*/
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 150px;
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.eco-marine {
+  font-size: 60px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+main h1 {
+  font-size: 2rem;
+  margin-top: 150px; /* espaço só em cima do h1 */
+}
+
+main h2 {
+  font-size: 28px;
+  margin: 15px 0;
+  line-height: 1.4;
+  color: white;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+main p {
+  font-size: 18px;
+  margin: 15px 0;
+  line-height: 1.5;
+  color: white;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+hr { /* Linha */
+  border: 0;
+  height: 2px;
+  background: linear-gradient(to right, #fff, #04aeb4, #fff);
+  margin: 30px 0;
+  width: 80%;
+}
+
+.cta-button { /* Botão CTA */
+  margin-top: 20px;
+  padding: 14px 32px;
+  background-color: #04aeb4;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(4, 174, 180, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px #04aeb466;
+}
+
+.features { /* Seção de Benefícios */
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  margin: 50px 0;
+  padding: 0 13%;
+}
+
+.feature-item {
+  text-align: center;
+  max-width: 280px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+.feature-item .icon {
+  font-size: 48px;
+  color: #04aeb4;
+  margin-bottom: 15px;
+}
+
+.feature-item h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: white;
+  font-weight: 600;
+}
+
+.feature-item p {
+  color: #ddd;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.quiz-section { /*Card do Quiz */
+  text-align: center;
+  margin: 100px 0;
+}
+
+.quiz-card {
+  display: inline-block;
+  width: 320px;
+  padding: 24px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 16px;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quiz-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+.quiz-card h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.quiz-card p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+footer { /*Rodapé*/
+  margin-top: 100px;
+  padding: 30px 5%;
+  text-align: center;
+  color: #ccc;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.social-links {
+  margin-top: 12px;
+}
+
+.social-links i {
+  color: white;
+  font-size: 20px;
+  margin: 0 12px;
+  transition: color 0.3s ease;
+}
+
+.social-links i:hover {
+  color: #04aeb4;
+}

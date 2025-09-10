@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha Marinho</title>
+    <link rel="stylesheet" href="Jogo da Velha.css">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:tght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="ocean-bg" id="bubbles"></div>
+
+    <div class="game-container">
+        <h1 class="title">JOGO DA VELHA MARINHO</h1>
+        
+        <div class="score-board">
+            <div class="score-item">
+                <div class="player-icon octopus"></div>
+                <span>Polvo</span>
+                <span id="score-octopus">0</span>
+            </div>
+            <div class="score-item">
+                <div class="player-icon clownfish"></div>
+                <span>Peixe-palhaço</span>
+                <span id="score-clownfish">0</span>
+            </div>
+        </div>
+
+        <div class="status" id="status">Polvo começa!</div>
+
+        <div class="board" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <button class="reset-btn" id="resetBtn">🔁 Reiniciar Jogo</button>
+    </div>
+
+    <script src="Jogo da Velha.js"></script>
+</body>
+</html>
+
+

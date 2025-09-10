@@ -1,0 +1,229 @@
+* {
+   margin: 0;
+   padding: 0;
+   font-family: "Roboto", sans-serif;
+   box-sizing: border-box;
+}
+
+body {
+   background: url("./imagens/Fundo\ Quiz.png") no-repeat center center;
+   background-size: cover;
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+   padding: 0;
+}
+
+header {
+   position: fixed;
+   top: 15px; 
+   left: 0;
+   width: 100%;
+   padding: 20px 200px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-family: "Lora", serif;
+   font-size: 24px;  
+}
+ 
+header nav a,
+.nav-links li a,
+.navbar a {
+   font-size: 20px; 
+}
+
+ .navbar {
+   width: 100%;
+   padding: 0.8rem 0;
+   position: fixed;
+   top: 0;
+   left: 0;
+   text-align: center;
+   z-index: 1000;
+   font-family: "Lora", serif;
+ }
+ 
+ .nav-container {
+   max-width: 75rem;
+   margin: 0 auto;
+   padding: 0 2rem;
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+   gap: 1rem; 
+   font-family: "Lora", serif;
+ }
+
+ .nav-links {
+   list-style: none;
+   display: flex;
+   gap: 2rem;
+   margin: 0 auto;
+   padding: 0;
+   font-family: "Lora", serif;
+   flex-wrap: nowrap; 
+   justify-content: center;
+ }
+ 
+ .nav-links li a {
+   text-decoration: none;
+   color: #fff;
+   font-weight: 600;
+   letter-spacing: 0.063rem;
+   transition: color 0.3s ease;
+   font-family: "Lora", serif;
+   white-space: nowrap;
+ }
+ 
+ .nav-links li a:hover {
+   color: #04aeb4;
+   font-family: "Lora", serif;
+ }
+ 
+ .navbar ul {
+   list-style: none;
+   font-family: "Lora", serif;
+ }
+ 
+ .navbar li {
+   display: inline-block;
+   margin: 0 1.5rem;
+   font-family: "Lora", serif;
+ }
+ 
+ .navbar a {
+   text-decoration: none;
+   color: #fff;
+   font-weight: 600;
+   letter-spacing: 0.063rem;
+   transition: color 0.3s ease;
+   font-family: "Lora", serif;
+ }
+
+.app{
+   background: rgba(255, 255, 255, 0.85);
+   width: 95%;
+   max-width: 48rem;
+   margin: 6rem auto 0;
+   padding: 2.5rem;
+   border-radius: 2rem;
+  
+}
+
+.white-box {
+   background-color: #f2f2f2;
+   padding: 2rem;
+   border-radius: 1.5rem;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.app h1 {
+   font-family: "Inter", serif;
+   font-size: 1.525rem;
+   font-weight: 700;
+   color: #04aeb4;
+}
+
+.quiz {
+   padding: 1.25rem 0 0;
+}
+
+.quiz h2 {
+   font-size: 1.125rem;
+   color: #050808;
+   font-weight: 600;
+   font-family: "Lora", serif;
+   margin-bottom: 30px;
+}
+
+.btn {  
+   background: #fff;
+   color: #222;
+   font-weight: 500;
+   width: 100%;
+   border: 0.0625rem solid #222;
+   padding: 0.625rem;
+   margin: 0.625rem 0;
+   text-align: left;
+   border-radius: 3.125rem;
+   cursor: pointer;
+   transition: all 0.3s;
+}
+
+.btn:hover:not([disabled]) {
+   background: #81ADBA;
+   color: #fff;
+}
+
+.btn:disabled {
+   cursor: no-drop;
+}
+
+#next-btn {
+   display: block;
+   margin: 16px auto 0;
+   width: 150px;
+   background: #19053C;
+   color: #fff;
+   font-weight: 500;
+   border: 0;
+   padding: 0.625rem;
+   border-radius: 2rem;
+   cursor: pointer;
+   font-family: "Inter", serif;
+   margin-top: 2rem;
+}
+
+.correct {
+   background: rgb(106, 194, 106);
+}
+
+.incorrect {
+   background: rgb(226, 84, 84);
+}
+
+hr {
+   border: 0; 
+   height: 2px; 
+   background: linear-gradient(to right, #04aeb4 0%, #04aeb4 20%, #fff 100%); 
+   width: 80%; 
+   margin-top: 30px;      
+   margin-bottom: 10px;   
+}
+
+.logo {
+   cursor: pointer;
+   transition: transform 0.3s ease-in-out;
+   display: inline-block;
+   will-change: transform;
+}
+
+.logo:hover {
+   animation: bounceTwist 0.8s ease-in-out forwards;
+}
+
+@keyframes bounceTwist {
+   0% {
+       transform: scale(1) rotate(0deg) translateY(0);
+   }
+   15% {
+       transform: scale(1.1) rotate(3deg) translateY(-3px);
+   }
+   30% {
+       transform: scale(1.05) rotate(-3deg) translateY(-6px);
+   }
+   45% {
+       transform: scale(1.08) rotate(2deg) translateY(-3px);
+   }
+   60% {
+       transform: scale(1.03) rotate(-1deg) translateY(-1px);
+   }
+   75% {
+       transform: scale(1.02) rotate(0.5deg) translateY(-0.5px);
+   }
+   100% {
+       transform: scale(1) rotate(0deg) translateY(0);
+   }
+}

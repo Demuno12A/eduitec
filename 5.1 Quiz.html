@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="icon" type="image/png" href="./imagens/Logo.png">
+    
+    <link rel="stylesheet" href="5.1 QuizStyle.css">
+    <script defer src="5.1 QuizScript.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="1 Home.html">
+                <img src="./imagens/Logo.png" alt="Logo" class="logo">
+            </a>
+            <ul class="nav-links">
+
+                <li><a href="2 O que é Biologia Marinha .html">O QUE É BIOLOGIA MARINHA</a></li>
+                <li><a href="3 Curiosidades .html">CURIOSIDADES</a></li>
+                <li><a href="4 Quem Somos.html" class="active">QUEM SOMOS</a></li>
+                <li><a href="6 Jogos.html">JOGOS</a></li> 
+        </ul>
+    </nav>
+    
+    <div class="app">
+        <h1>Quiz Marinho: Explorando o Oceano</h1>
+        <hr>
+        <div class="quiz">
+            <div class="white-box">
+            <h2 id="question">Question goes here</h2>
+            <div id="botao-resposta">
+                <button class="btn">Resposta 1</button>
+                <button class="btn">Resposta 2</button>
+                <button class="btn">Resposta 3</button>
+                <button class="btn">Resposta 4</button>
+            </div>
+            <button id="next-btn">Próxima</button>
+        </div>
+    </div>
+</body>
+
+<div id="resultado" style="display:none;">
+    <div class="resultado-card">
+    <div class="detalhes">
+        <p>Total de questões: <span id="total"></span></p>
+        <p>Acertos: <span id="corretas"></span></p>
+        <p>Erros: <span id="erradas"></span></p>
+      </div>
+  
+      <button id="restart-btn">Reiniciar Quiz</button>
+    </div>
+  </div> 
+</html>

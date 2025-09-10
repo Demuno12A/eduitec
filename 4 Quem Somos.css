@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body { /* Fundo da página */
+    background-image: url('./imagens/Fundo\ Mergulhador.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  header {
+    position: fixed;
+    top: 15px; 
+    left: 0;
+    width: 100%;
+    padding: 20px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Lora", serif;
+    font-size: 24px;  
+}
+  
+header nav a,
+.nav-links li a,
+.navbar a {
+    font-size: 20px; /* mantém os links legíveis e consistentes */
+}
+  
+  .nav-container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 1rem; 
+    font-family: "Lora", serif;
+  }
+  
+  .navbar {
+    width: 100%;
+    padding: 0.8rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 1000;
+    font-family: "Lora", serif;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.063rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #04aeb4;
+  }
+  
+  .navbar ul {
+    list-style: none;
+  }
+  
+  .navbar li {
+    display: inline-block;
+    margin: 0 1.5rem;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.063rem;
+    transition: color 0.3s ease;
+  }
+  
+  .logo {
+    font-weight: 600;
+  }
+  
+  .social a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 300;
+  }
+  
+  /* Content */
+  .content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    align-items: center;
+    margin-top: 300px;
+    margin-left: 100px;
+  }
+  
+  .text-area {
+    max-width: 600px;
+    position: relative;
+  }
+  
+  .vertical {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    position: absolute;
+    left: -60px;
+    top: 0;
+    font-weight: bold;
+    color: #5c9bd3;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  
+  .text-area h1 {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-transform: lowercase;
+    color: #9dc6f2;
+  }
+  
+  .text-area h1 span {
+    color: white;
+  }
+  
+  .text-area p {
+    font-size: 14px;
+    color: #cccccc;
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+  
+  .read-more {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    padding-bottom: 2px;
+  }
+
+  .logo {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+    will-change: transform;
+  }
+  
+  .logo:hover {
+    animation: bounceTwist 0.8s ease-in-out forwards;
+  }
+  
+  @keyframes bounceTwist {
+    0% {
+        transform: scale(1) rotate(0deg) translateY(0);
+    }
+    15% {
+        transform: scale(1.1) rotate(3deg) translateY(-3px);
+    }
+    30% {
+        transform: scale(1.05) rotate(-3deg) translateY(-6px);
+    }
+    45% {
+        transform: scale(1.08) rotate(2deg) translateY(-3px);
+    }
+    60% {
+        transform: scale(1.03) rotate(-1deg) translateY(-1px);
+    }
+    75% {
+        transform: scale(1.02) rotate(0.5deg) translateY(-0.5px);
+    }
+    100% {
+        transform: scale(1) rotate(0deg) translateY(0);
+    }
+  }

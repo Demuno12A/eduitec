@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha: Polvo vs Peixe</title>
+    <link rel="icon" type="image/png" href="./imagens/Logo.png">
+    <link rel="stylesheet" href="jogo1.css">
+</head>
+<body>
+    <div class="ocean-bg" id="bubbles"></div>
+
+    <div class="game-container">
+        <h1>🐙 Polvo vs 🐟 Peixe</h1>
+        
+        <!-- Botão de Sair -->
+        <button class="exit-btn" id="exitBtn">🚪 Sair</button>
+
+        <!-- Placar -->
+        <div class="score">
+            Pontos Polvo: <span id="scoreO">0</span> | 
+            Pontos Peixe: <span id="scoreX">0</span>
+        </div>
+
+        <!-- Tabuleiro Centralizado -->
+        <div class="board" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <div class="status" id="status">Vez do 🐙</div>
+
+        <div class="game-over" id="gameOver">
+            <h2 id="winnerMessage">🎉 Vencedor!</h2>
+            <button class="restart-btn" id="restartBtn">🔁 Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="jogo1.js"></script>
+</body>
+</html>
