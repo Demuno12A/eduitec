@@ -17,21 +17,21 @@ body { /* Fundo da página */
 
 header { 
   position: absolute; /* em vez de fixed */
-  top: 15px; 
+  top: 0.9375rem; 
   left: 0;
   width: 100%;
-  padding: 20px 200px;
+  padding: 1.25rem 12.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: "Lora", serif;
-  font-size: 24px;  
+  font-size: 1.5rem;  
 }
 
 header nav a,
 .nav-links li a,
 .navbar a {
-  font-size: 20px; 
+  font-size: 1.25rem; 
 }
 
 .navbar {
@@ -78,7 +78,7 @@ header nav a,
 }
 
 .nav-links li a:hover {
-  color: #04aeb4;
+  color: #74B5DE;
   font-family: "Lora", serif;
 }
 
@@ -118,19 +118,19 @@ header nav a,
       transform: scale(1) rotate(0deg) translateY(0);
   }
   15% {
-      transform: scale(1.1) rotate(3deg) translateY(-3px);
+      transform: scale(1.1) rotate(3deg) translateY(-0.1875rem);
   }
   30% {
-      transform: scale(1.05) rotate(-3deg) translateY(-6px);
+      transform: scale(1.05) rotate(-3deg) translateY(-0.375rem);
   }
   45% {
-      transform: scale(1.08) rotate(2deg) translateY(-3px);
+      transform: scale(1.08) rotate(2deg) translateY(-0.1875rem);
   }
   60% {
-      transform: scale(1.03) rotate(-1deg) translateY(-1px);
+      transform: scale(1.03) rotate(-1deg) translateY(-0.0625rem);
   }
   75% {
-      transform: scale(1.02) rotate(0.5deg) translateY(-0.5px);
+      transform: scale(1.02) rotate(0.5deg) translateY(-0.03125rem);
   }
   100% {
       transform: scale(1) rotate(0deg) translateY(0);
@@ -143,156 +143,156 @@ main { /*Conteudo Principal*/
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-left: 150px;
-  max-width: 600px;
+  padding-left: 9.375rem;
+  max-width: 37.5rem;
   position: relative;
   z-index: 2;
   color: white;
 }
 
 .eco-marine {
-  font-size: 60px;
+  font-size: 3.75rem;
   font-weight: 800;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
   color: white;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  text-shadow: 0.125rem 0.125rem 0.5rem rgba(0, 0, 0, 0.7);
 }
 
 main h1 {
   font-size: 2rem;
-  margin-top: 150px; /* espaço só em cima do h1 */
+  margin-top: 9.375rem; /* espaço só em cima do h1 */
 }
 
 main h2 {
-  font-size: 28px;
-  margin: 15px 0;
+  font-size: 1.75rem;
+  margin: 0.9375rem 0;
   line-height: 1.4;
   color: white;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+  text-shadow: 0.0625rem 0.0625rem 0.375rem rgba(0, 0, 0, 0.7);
 }
 
 main p {
-  font-size: 18px;
-  margin: 15px 0;
+  font-size: 1.125rem;
+  margin: 0.9375rem 0;
   line-height: 1.5;
   color: white;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+  text-shadow: 0.0625rem 0.0625rem 0.375rem rgba(0, 0, 0, 0.7);
 }
 
 hr { /* Linha */
   border: 0;
-  height: 2px;
+  height: 0.125rem;
   background: linear-gradient(to right, #fff, #04aeb4, #fff);
-  margin: 30px 0;
+  margin: 1.875rem 0;
   width: 80%;
 }
 
 .cta-button { /* Botão CTA */
-  margin-top: 20px;
-  padding: 14px 32px;
+  margin-top: 1.25rem;
+  padding: 0.875rem 2rem;
   background-color: #04aeb4;
   color: white;
   border: none;
-  border-radius: 30px;
-  font-size: 18px;
+  border-radius: 1.875rem;
+  font-size: 1.125rem;
   font-weight: bold;
   text-decoration: none;
   display: inline-block;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(4, 174, 180, 0.3);
+  box-shadow: 0 0.25rem 0.9375rem rgba(4, 174, 180, 0.3);
 }
 
 .cta-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px #04aeb466;
+  transform: translateY(-0.1875rem);
+  box-shadow: 0 0.375rem 1.25rem #04aeb466;
 }
 
 .features { /* Seção de Benefícios */
   display: flex;
   justify-content: space-around;
-  gap: 40px;
-  margin: 50px 0;
+  gap: 2.5rem;
+  margin: 3.125rem 0;
   padding: 0 13%;
 }
 
 .feature-item {
   text-align: center;
-  max-width: 280px;
+  max-width: 17.5rem;
   background-color: rgba(0, 0, 0, 0.4);
-  padding: 20px;
-  border-radius: 15px;
+  padding: 1.25rem;
+  border-radius: 0.9375rem;
   backdrop-filter: blur(5px);
 }
 
 .feature-item .icon {
-  font-size: 48px;
+  font-size: 3rem;
   color: #04aeb4;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 
 .feature-item h3 {
-  font-size: 18px;
-  margin-bottom: 12px;
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
   color: white;
   font-weight: 600;
 }
 
 .feature-item p {
   color: #ddd;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
 .quiz-section { /*Card do Quiz */
   text-align: center;
-  margin: 100px 0;
+  margin: 6.25rem 0;
 }
 
 .quiz-card {
   display: inline-block;
-  width: 320px;
-  padding: 24px;
+  width: 20rem;
+  padding: 1.5rem;
   background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 16px;
+  border-radius: 1rem;
   text-decoration: none;
   color: white;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .quiz-card:hover {
   transform: scale(1.08);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.75rem 1.5625rem rgba(0, 0, 0, 0.5);
 }
 
 .quiz-card h3 {
-  font-size: 20px;
-  margin-bottom: 8px;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .quiz-card p {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #ccc;
 }
 
 footer { /*Rodapé*/
-  margin-top: 100px;
-  padding: 30px 5%;
+  margin-top: 6.25rem;
+  padding: 1.875rem 5%;
   text-align: center;
   color: #ccc;
-  font-size: 14px;
+  font-size: 0.875rem;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
 }
 
 .social-links {
-  margin-top: 12px;
+  margin-top: 0.75rem;
 }
 
 .social-links i {
   color: white;
-  font-size: 20px;
-  margin: 0 12px;
+  font-size: 1.25rem;
+  margin: 0 0.75rem;
   transition: color 0.3s ease;
 }
 

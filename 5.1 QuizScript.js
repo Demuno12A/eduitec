@@ -53,7 +53,7 @@ const questions = [
             { id: 4, text: " Todas as opções acima ", correct:false},
         ],
     },
-]
+];
 
 const questionElement = document.getElementById("question");
 const botaoResposta = document.getElementById("botao-resposta");
@@ -65,7 +65,7 @@ let score = 0;
 function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
-    nextButton.innerHTML = "Próxima"
+    nextButton.innerHTML = "Próxima";
     showQuestion();
 }
 
@@ -89,30 +89,29 @@ function showQuestion() {
         button.classList.add("btn");
         button.addEventListener("click", selectAnswer);
         botaoResposta.appendChild(button);
-        
     });
 }
 
 function selectAnswer(e) {
-    answers = questions[currentQuestionIndex].answers;
-    const correctAnswer = answers.filter((answer) => answer.correct === true)[0];
+    const answers = questions[currentQuestionIndex].answers;
+    const correctAnswer = answers.find(a => a.correct);
 
     const selectedBtn = e.target;
-    const isCorrect = selectedBtn.dataset.id == correctAnswer.id;
-    if (isCorrect) {
-        selectedBtn.classList.add("correct");
-        score++;
-    } else {
-        selectedBtn.classList.add("incorrect");
-    }
+    const isCorrect = Number(selectedBtn.dataset.id) === correctAnswer.id;
+
+    selectedBtn.classList.add(isCorrect ? "correct" : "incorrect");
+
     Array.from(botaoResposta.children).forEach((button) => {
         button.disabled = true;
+        if (Number(button.dataset.id) === correctAnswer.id) {
+            button.classList.add("correct");
+        }
     });
+
     nextButton.style.display = "block";
+}
 
-} 
-
-function showScore(){
+function showScore() {
     resetState();
     questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`;
     nextButton.innerHTML = "Reiniciar";
@@ -130,11 +129,10 @@ function handleNextButton() {
 
 nextButton.addEventListener("click", () => {
     if (currentQuestionIndex < questions.length) {
-       handleNextButton();
+        handleNextButton();
     } else {
         startQuiz();
     }
-
-});
+})
 
 startQuiz();

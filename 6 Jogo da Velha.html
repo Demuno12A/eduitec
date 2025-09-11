@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="icon" type="image/png" href="./imagens/Logo.png">
+    <link rel="stylesheet" href="6 Jogo da Velha.css">
+    <script src="6 Jogo da Velha.js"></script>
+
+  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="1 Home.html">
+                <img src="./imagens/Logo.png" alt="Logo" class="logo">
+            </a>
+            <ul class="nav-links">
+
+                <li><a href="2 O que é Biologia Marinha .html">O QUE É BIOLOGIA MARINHA</a></li>
+                <li><a href="3 Curiosidades .html">CURIOSIDADES</a></li>
+                <li><a href="4 Quem Somos.html" class="active">QUEM SOMOS</a></li>
+                <li><a href="6 Inicio Jogos.html">JOGOS</a></li> 
+        </ul>
+    </nav>
+
+    <div class="ocean-bg" id="bubbles"></div>
+
+
+        <div class="game-container">
+            <h1>🐙 Polvo vs 🐟 Peixe</h1>
+        
+            <!-- Botão de Sair -->
+            <button class="exit-btn" id="exitBtn">🚪 Sair</button>
+        
+            <!-- Placar -->
+            <div class="score">
+                Pontos Polvo: <span id="scoreO">0</span> | 
+                Pontos Peixe: <span id="scoreX">0</span>
+            </div>
+        
+            <!-- Tabuleiro Centralizado -->
+            <div class="board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+        
+            <!-- Botão Reiniciar Jogo -->
+            <button id="resetBtn">🔁 Reiniciar Jogo</button>
+        
+            <div class="status" id="status">Vez do 🐙</div>
+        
+            <!-- Game Over -->
+            <div class="game-over" id="gameOver">
+                <h2 id="winnerMessage">🎉 Vencedor!</h2>
+                <button class="reset-btn" id="resetBtnOverlay">🔁 Reiniciar Jogo</button>
+            </div>
+        
+            <!-- Modal de Confirmação de Saída -->
+            <div class="modal" id="exitModal">
+                <div class="modal-content">
+                    <h2>🚪 Sair do Jogo?</h2>
+                    <p>Tem certeza que deseja sair? Seu placar será perdido.</p>
+                    <div class="modal-buttons">
+                        <button class="btn yes" id="yesBtn">Sim</button>
+                        <button class="btn no" id="noBtn">Não</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    <script src="jogo1.js"></script>
+</body>
+</html>
