@@ -1,6 +1,6 @@
 const questions = [
     {
-        question: "Qual ramo da Biologia se dedica ao estudo de Organismos Marinhos?",
+        question: "Que ramo da Biologia estuda a vida marinha? ",
         answers: [
             { id: 1, text: "Oceanografia Química", correct:false},
             { id: 2, text: "Ecologia Molecular", correct:false},
@@ -9,7 +9,7 @@ const questions = [
         ],
     },
     {
-        question: "Qual o maior mamífero que habita o Mar?",
+        question: "Qual é o maior mamífero que habita o mar?",
         answers: [
             { id: 1, text: "Baleia Azul", correct:true},
             { id: 2, text: "Tubarão Branco", correct:false},
@@ -18,16 +18,16 @@ const questions = [
         ],
     },
     {
-        question: "Qual o animal marinho que nada mais rápido?",
+        question: "Qual o animal marinho que nada rápido?",
         answers: [
             { id: 1, text: "Tubarão Branco", correct:false},
             { id: 2, text: "Peixe Espada", correct:false},
             { id: 3, text: "Golfinho", correct:false},
-            { id: 4, text: "Peixe agulhão-vela", correct:true},
+            { id: 4, text: "Peixe agulão-vela", correct:true},
         ],
     },
     {
-        question: "Qual o principal alimento dos tubarões brancos?",
+        question: "Qual  o principal alimento dos tubarões brancos?",
         answers: [
             { id: 1, text: "Focas/Leões marinhos", correct:false},
             { id: 2, text: "Carcaças de Baleia", correct:false},
@@ -36,24 +36,24 @@ const questions = [
         ],
     },
     {
-        question: "O que é o plâncton?",
+        question: "Oque é o plâncton?",
         answers: [
-            { id: 1, text: "Peixe de águas rasas", correct:false},
+            { id: 1, text: "Peixe de águas rasas", correct:true},
             { id: 2, text: "Algas gigantes", correct:false},
-            { id: 3, text: "Microrganismos marinhos", correct:true},
-            { id: 4, text: " Fragmentos de detritos", correct:false},
+            { id: 3, text: "Microorganismos marinhos", correct:false},
+            { id: 4, text: "Fragmentos de detritos", correct:false},
         ],
     },
     {
         question: "Qual é a função das barbatanas nos peixes?",
         answers: [
-            { id: 1, text: "Locomoção, equilíbrio e direção", correct:true},
-            { id: 2, text: " Arma de defesa ", correct:false},
+            { id: 1, text: "Locomoção,equilíbrio e direção", correct:true},
+            { id: 2, text: "Arma de defesa", correct:false},
             { id: 3, text: "Aquecer o corpo em águas frias", correct:false},
-            { id: 4, text: " Todas as opções acima ", correct:false},
+            { id: 4, text: "Todas as opções acima", correct:false},
         ],
     },
-];
+]
 
 const questionElement = document.getElementById("question");
 const botaoResposta = document.getElementById("botao-resposta");
@@ -65,7 +65,7 @@ let score = 0;
 function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
-    nextButton.innerHTML = "Próxima";
+    nextButton.innerHTML = "Próxima"
     showQuestion();
 }
 
@@ -89,29 +89,30 @@ function showQuestion() {
         button.classList.add("btn");
         button.addEventListener("click", selectAnswer);
         botaoResposta.appendChild(button);
+        
     });
 }
 
 function selectAnswer(e) {
-    const answers = questions[currentQuestionIndex].answers;
-    const correctAnswer = answers.find(a => a.correct);
+    answers = questions[currentQuestionIndex].answers;
+    const correctAnswer = answers.filter((answer) => answer.correct === true)[0];
 
     const selectedBtn = e.target;
-    const isCorrect = Number(selectedBtn.dataset.id) === correctAnswer.id;
-
-    selectedBtn.classList.add(isCorrect ? "correct" : "incorrect");
-
+    const isCorrect = selectedBtn.dataset.id == correctAnswer.id;
+    if (isCorrect) {
+        selectedBtn.classList.add("correct");
+        score++;
+    } else {
+        selectedBtn.classList.add("incorrect");
+    }
     Array.from(botaoResposta.children).forEach((button) => {
         button.disabled = true;
-        if (Number(button.dataset.id) === correctAnswer.id) {
-            button.classList.add("correct");
-        }
     });
-
     nextButton.style.display = "block";
-}
 
-function showScore() {
+} 
+
+function showScore(){
     resetState();
     questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`;
     nextButton.innerHTML = "Reiniciar";
@@ -129,10 +130,11 @@ function handleNextButton() {
 
 nextButton.addEventListener("click", () => {
     if (currentQuestionIndex < questions.length) {
-        handleNextButton();
+       handleNextButton();
     } else {
         startQuiz();
     }
-})
+
+});
 
 startQuiz();

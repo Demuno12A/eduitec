@@ -6,7 +6,7 @@
 }
 
 body {
-   background: url("./imagens/Fundo.quiz") no-repeat center center;
+   background: url("./imagens/Fundo\ Quiz.jpg") no-repeat center center;
    background-size: cover;
    min-height: 100vh;
    display: flex;
@@ -16,7 +16,7 @@ body {
 }
 
 header { 
-   position: absolute;
+   position: absolute; 
    top: 0.9375rem; 
    left: 0;
    width: 100%;
@@ -28,24 +28,21 @@ header {
    font-size: 1.5rem;  
  }
  
-header nav a,
-.nav-links li a,
-.navbar a {
+ header nav a,
+ .nav-links li a,
+ .navbar a {
    font-size: 1.25rem; 
-}
-
-.navbar {
+ }
+ 
+ .navbar {
    width: 100%;
    padding: 0.8rem 0;
-   position: absolute;
+   position: absolute; 
    top: 0;
    left: 0;
    text-align: center;
    z-index: 1000;
    font-family: "Lora", serif;
- }
- main {
-   margin-top: 6.25rem;
  }
  
  .nav-container {
@@ -58,7 +55,7 @@ header nav a,
    gap: 1rem; 
    font-family: "Lora", serif;
  }
-
+ 
  .nav-links {
    list-style: none;
    display: flex;
@@ -104,6 +101,37 @@ header nav a,
    transition: color 0.3s ease;
    font-family: "Lora", serif;
  }
+ 
+ .logo { 
+   cursor: pointer;
+   transition: transform 0.3s ease-in-out;
+   display: inline-block;
+   will-change: transform;
+ }
+ 
+ @keyframes bounceTwist {
+   0% {
+       transform: scale(1) rotate(0deg) translateY(0);
+   }
+   15% {
+       transform: scale(1.1) rotate(3deg) translateY(-0.1875rem);
+   }
+   30% {
+       transform: scale(1.05) rotate(-3deg) translateY(-0.375rem);
+   }
+   45% {
+       transform: scale(1.08) rotate(2deg) translateY(-0.1875rem);
+   }
+   60% {
+       transform: scale(1.03) rotate(-1deg) translateY(-0.0625rem);
+   }
+   75% {
+       transform: scale(1.02) rotate(0.5deg) translateY(-0.03125rem);
+   }
+   100% {
+       transform: scale(1) rotate(0deg) translateY(0);
+   }
+ }
 
  .welcome-container {
    text-align: center; 
@@ -112,7 +140,7 @@ header nav a,
 .welcome-image {
    display: block;
    margin: 0 auto 0.5rem; 
-   width: 19.248rem;      
+   width: 15.248rem;      
    height: auto; 
 }
  
@@ -228,41 +256,3 @@ hr {
    margin-top: 1.875rem;     
    margin-bottom: 0.625rem;   
 }
-
-.logo {
-   cursor: pointer;
-   transition: transform 0.3s ease-in-out;
-   display: inline-block;
-   will-change: transform;
-}
-
-.logo:hover {
-   animation: bounceTwist 0.8s ease-in-out forwards;
-}
-
-@keyframes bounceTwist {
-   0% {
-       transform: scale(1) rotate(0deg) translateY(0);
-   }
-   15% {
-       transform: scale(1.1) rotate(3deg) translateY(-0.1875rem);
-   }
-   30% {
-       transform: scale(1.05) rotate(-3deg) translateY(-0.375rem);
-   }
-   45% {
-       transform: scale(1.08) rotate(2deg) translateY(-0.1875rem);
-   }
-   60% {
-       transform: scale(1.03) rotate(-1deg) translateY(-0.0625rem);
-   }
-   75% {
-       transform: scale(1.02) rotate(0.5deg) translateY(-0.03125rem);
-   }
-   100% {
-       transform: scale(1) rotate(0deg) translateY(0);
-   }
-}
-
-
-

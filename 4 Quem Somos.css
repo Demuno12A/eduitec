@@ -15,9 +15,10 @@ body {
   position: relative;
 }
 
+
 header { 
-  position: absolute; /* em vez de fixed */
-  top: 0.9375rem; 
+  position: absolute; /* ou relative */
+  top: 0; 
   left: 0;
   width: 100%;
   padding: 1.25rem 12.5rem;
@@ -26,7 +27,9 @@ header {
   align-items: center;
   font-family: "Lora", serif;
   font-size: 1.5rem;  
+  z-index: 1000;
 }
+
 
 header nav a,
 .nav-links li a,
@@ -37,11 +40,11 @@ header nav a,
 .navbar {
   width: 100%;
   padding: 0.8rem 0;
-  position: absolute; /* em vez de fixed */
+  position: fixed; /* fixo também */
   top: 0;
   left: 0;
   text-align: center;
-  z-index: 1000;
+  z-index: 1001;
   font-family: "Lora", serif;
 }
 
@@ -151,7 +154,7 @@ header nav a,
   justify-content: space-between;
   padding: 0 3.125rem; /* 50px */
   align-items: center;
-  margin-top: 18.75rem; /* 300px */
+  margin-top: 10rem; /* altura do header */
   margin-left: 6.25rem; /* 100px */
 }
 
@@ -178,6 +181,7 @@ header nav a,
   line-height: 1.2;
   text-transform: lowercase;
   color: #062f52;
+  margin-top: 4rem;
 }
 
 .text-area h1 span {

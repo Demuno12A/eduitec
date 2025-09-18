@@ -31,17 +31,15 @@ body {
   border-bottom: 0.0625rem solid var(--border); /* 1px */
 }
 
-header { 
-  position: absolute; /* em vez de fixed */
-  top: 0.9375rem; 
+header {
+  position: absolute;
+  top: 0; /* em vez de 0.9375rem */
   left: 0;
   width: 100%;
   padding: 1.25rem 12.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Lora", serif;
-  font-size: 1.5rem;  
 }
 
 header nav a,
@@ -170,29 +168,29 @@ h3 {
 }
 
 .title-box {
-  margin-top: 4.375rem; /* 70px */
   position: absolute;
-  top: 10%;
-  right: 5%;
-  max-width: 20rem; /* 320px */
-  text-align: right;
+  top: 15%;
+  left: 5%; /* use left em vez de right */
+  max-width: 20rem;
+  text-align: left; /* em vez de right */
 }
 
+
 .title-box h1 {
-  font-size: 2.8rem;
-  letter-spacing: 0.125rem;
+  font-size: 4rem; /* antes 2.8rem */
   margin: 0;
 }
 
 .title-box h2 {
-  font-size: 1.4rem;
+  font-size: 2rem; /* antes 1.4rem */
   color: var(--muted);
-  margin: 0.25rem 0 0.75rem; /* 4px 12px */
+  margin: 0.5rem 0 1rem;
 }
 
 .title-box .intro {
-  font-size: 0.59375rem; /* 9.5px */
+  font-size: 1rem; /* antes 0.59375rem */
   color: var(--muted);
+  line-height: 1.5; /* mais espaçamento entre linhas */
 }
 
 /* etiquetas */

@@ -150,7 +150,7 @@ main {
   flex-direction: column;
   justify-content: center;
   padding-left: 12.5rem; /* 200px */     
-  margin-top: 0.625rem; /* 10px */
+  margin-top: 4rem; /* 10px */
   max-width: 43.75rem; /* 700px */
 }
 
