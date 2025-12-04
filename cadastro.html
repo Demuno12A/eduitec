@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EDUTEC - Cadastro</title>
+  <link rel="stylesheet" href="cadastro.css"/>
+</head>
+<body>
+
+  <a href="1 Home.html" class="back-link">Volte para o site</a>
+
+  <div class="container">
+    <div class="left-panel">
+      <h1>Cadastre-se com a gente</h1>
+      <p>Junte-se a nós e ajude a proteger os oceanos.</p>
+    </div>
+
+    <div class="right-panel">
+      <div class="form-container">
+        <h2>Bem-vindo ao ecomarine</h2>
+        <p>Por favor, preencha seus dados abaixo</p>
+
+        <form id="signup-form">
+          <div class="input-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" placeholder="Insira o seu nome" required />
+            <span class="icon">👤</span>
+          </div>
+
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Insira o seu email" required />
+            <span class="icon">✉️</span>
+          </div>
+
+          <div class="input-group">
+            <label for="password">Senha</label>
+            <input type="password" id="password" placeholder="Digite sua senha" required />
+            <span class="icon">🔒</span>
+          </div>
+
+          <div class="remember-me">
+            <input type="checkbox" id="save-password" />
+            <label for="save-password">Salvar senha</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Registrar a conta</button>
+
+          <div class="login-link">
+            Já tem uma conta? <a href="login.html">log in agora!</a>
+          </div>
+
+       
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <a href="home.html" class="back-link">Volte para o site</a>
+
+  <script src="cadastro.js"></script>
+</body>
+</html>

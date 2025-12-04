@@ -15,24 +15,35 @@
 
     <!-- ESTILOS -->
     <link rel="stylesheet" href="css/jogo3.css">
-    <link rel="icon" type="image/png" href="./imagens/Logo.png">
+    <link rel="icon" type="image/png" href="../../imagens/Logo.png">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <a href="1 Home.html">
-                <img src="./imagens/Logo.png" alt="Logo" class="logo">
+                <img src="../../imagens/Logo.png" alt="Logo" class="logo">
             </a>
+    
             <ul class="nav-links">
 
                 <li><a href="2 O que é Biologia Marinha .html">O QUE É BIOLOGIA MARINHA</a></li>
                 <li><a href="3 Curiosidades .html">CURIOSIDADES</a></li>
                 <li><a href="4 Quem Somos.html" class="active">QUEM SOMOS</a></li>
                 <li><a href="6 Inicio Jogos.html">JOGOS</a></li> 
-        </ul>
-    </nav>
+            </ul>
+        </div>
+    </nav>    
 
-
+    <div id="startScreen">
+        <h2>Bem-vindo ao Jogo de Cartas Marinhas!</h2>
+        <input type="text" id="playerNameInput" placeholder="Digite seu nome" />
+        <button id="startBtn">Começar</button>
+      </div>
+      
+      <div id="gameScreen" style="display:none;">
+        <!-- aqui vai o seu jogo -->
+      </div>
+      
 
     <div class="ocean-bg" aria-hidden="true">
         <div id="bubbles"></div>

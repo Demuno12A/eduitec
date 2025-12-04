@@ -1,0 +1,24 @@
+[debug] [2025-12-04T13:32:26.855Z] ----------------------------------------------------------------------
+[debug] [2025-12-04T13:32:26.858Z] Command:       /nix/store/ws50yvm6vzlzf7jzz6n7xh4szddrack1-nodejs-20.19.1/bin/node /nix/store/c776mhyhgykcld7p90ajrka149ifn61a-firebase-tools-14.26.0/lib/node_modules/firebase-tools/lib/bin/firebase.js init
+[debug] [2025-12-04T13:32:26.858Z] CLI Version:   14.26.0
+[debug] [2025-12-04T13:32:26.858Z] Platform:      linux
+[debug] [2025-12-04T13:32:26.858Z] Node Version:  v20.19.1
+[debug] [2025-12-04T13:32:26.859Z] Time:          Thu Dec 04 2025 13:32:26 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-12-04T13:32:26.859Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-12-04T13:32:26.866Z] Checked if tokens are valid: true, expires at: 1764856277953
+[debug] [2025-12-04T13:32:26.867Z] Checked if tokens are valid: true, expires at: 1764856277953
+[debug] [2025-12-04T13:32:26.872Z] >>> [apiv2][query] GET https://monospace-pa.googleapis.com/v1/workspaces/edutec-20981032 [none]
+[debug] [2025-12-04T13:32:27.550Z] <<< [apiv2][status] GET https://monospace-pa.googleapis.com/v1/workspaces/edutec-20981032 200
+[debug] [2025-12-04T13:32:27.551Z] <<< [apiv2][body] GET https://monospace-pa.googleapis.com/v1/workspaces/edutec-20981032 {"workspaceId":"edutec-20981032","name":"edutec","workspaceRedirectUrl":"firebase-edutec-1754591638011.cluster-4xpux6pqdzhrktbhjf2cumyqtg.cloudworkstations.dev","status":"WORKSPACE_STATUS_RUNNING","lastAccessDatetime":"2025-12-04T13:26:14.179222Z","workspaceTemplate":"WORKSPACE_TEMPLATE_BLANK_WEB","owner":"SELF","serviceAccountEmail":"msp-6051010570746013615@monospace-3.iam.gserviceaccount.com","enableNix":true,"ownerEmail":"artursgdl@gmail.com","workspaceImageUrl":"https://www.gstatic.com/monospace/250314/workspace-blank-192.png","templateArgs":"{}","templateRepoUrl":"file:///usr/local/monospace/templates/public/blank-nix","workstationAccessToken":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Nsb3VkLmdvb2dsZS5jb20vd29ya3N0YXRpb25zIiwiYXVkIjoiZmlyZWJhc2UtZWR1dGVjLTE3NTQ1OTE2MzgwMTEuY2x1c3Rlci00eHB1eDZwcWR6aHJrdGJoamYyY3VteXF0Zy5jbG91ZHdvcmtzdGF0aW9ucy5kZXYiLCJpYXQiOjE3NjQ4NTUxNDcsImV4cCI6MTc2NDk0MTU0N30.c9thzCUd7eymtr1TcMMUHma2cO8lFeZrq4N5QXa0623u2pAZo4DU6tpDW3GUq4KZ_A594ddNHll0QOr-Tteb3MBitnZ0_j3GEvopnacX7-26o5zYJaINL4m_nPmW8k68_FRloCdMqzgDHAC9XVat-Enpgf28HJXqDyIG5cp_vw3HJbTA99jZ9Chg2oKExDw50DnmQo7OfRgCSo-I1m_zrhyhvq2_wBCA0n1Xl0npkoZ5ooTxL9idzJLlLzp3s7r5GRdV0ax5iq2ISyf63yEYCGbq4Pt0ZFLAwzc7Gor4etix6Z4SMPUXM3Qx99IZDiuSwIilY2N5XiCMDbuvGS71Kg","firebaseProjectId":"default-59bd9"}
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/user/edutec
+

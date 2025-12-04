@@ -300,3 +300,66 @@ footer { /*Rodapé*/
 .social-links i:hover {
   color: #04aeb4;
 }
+
+/* Botão Cadastre-se / Entre */
+.btn-login {
+  padding: 0.6rem 1.8rem;
+  background-color: rgba(0, 0, 0, 0.55);
+  border: 2px solid #ffffff30;
+  color: #fff;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: 0.3s ease;
+  white-space: nowrap;
+  backdrop-filter: blur(5px);
+}
+
+.btn-login:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Ajuste do container para alinhar o botão à direita */
+.nav-container {
+  justify-content: space-between;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  background-color: #0c5d70;
+  padding: 12px 20px;
+  border-radius: 40px;
+  color: white;
+  gap: 12px;
+  width: fit-content;
+}
+
+.user-photo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 17px;
+}
+
+.user-info #user-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.user-info #user-email {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.arrow {
+  font-size: 20px;
+  margin-left: 10px;
+}

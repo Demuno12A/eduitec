@@ -3,6 +3,16 @@
  * Biologia Marinha Educacional
  */
 
+document.getElementById('startBtn').addEventListener('click', () => {
+    const name = document.getElementById('playerNameInput').value.trim() || "Jogador";
+    localStorage.setItem('usuario', name); // guarda no navegador
+    document.getElementById('startScreen').style.display = 'none';
+    document.getElementById('gameScreen').style.display = 'block';
+  
+    new MarineCardGame();
+  });
+  
+
 class MarineCardGame {
     constructor() {
         this.lessons = [
@@ -86,8 +96,16 @@ class MarineCardGame {
         this.createSeaweed();
         await this.initAudio();
         this.startLesson(0);
-        this.nextBtn.addEventListener('click', () => this.nextLesson());
+    
+        // novo: listener assíncrono que espera o envio da pontuação antes de avançar
+        this.nextBtn.addEventListener('click', async () => {
+            // protege caso botão não exista
+            if (!this.nextBtn) return;
+            // chama nextLesson (agora async)
+            await this.nextLesson();
+        });
     }
+    
 
     async initAudio() {
         try {
@@ -301,7 +319,10 @@ class MarineCardGame {
             
             this.correctAnswers++;
             this.score += 10;
-            this.scoreElement.textContent = this.score;
+            this.scoreElement.textContent = this.score; // CORRETO
+
+
+
             
             // Efeito de confete
             this.createConfetti();
@@ -375,65 +396,70 @@ class MarineCardGame {
         this.playSound('levelUp');
     }
 
-    nextLesson() {
+    // avança de etapa E envia a pontuação ao backend antes de carregar a próxima
+    // avança de etapa E envia a pontuação ao backend antes de carregar a próxima
+async nextLesson() {
+    try {
+        // desativa botão para evitar múltiplos cliques
+        this.nextBtn.disabled = true;
+
+        // envia pontuação para o backend
+        const payload = {
+            playerName: localStorage.getItem("usuario"), // nome exato esperado pelo backend
+            score: this.score // pontuação
+        };
+        
+
+        if (!payload.playerName || isNaN(payload.score)) {
+            console.error("Payload inválido:", payload);
+            this.nextBtn.disabled = false;
+            return;
+        }
+
+        console.log("Enviando payload:", payload);
+
+        const response = await fetch("https://app-n5wahuji6a-uc.a.run.app/api/salvar-pontuacao", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+            mode: "cors"
+        });
+
+        const data = await response.json();
+        console.log("Resposta backend:", data);
+
+        // vai para a próxima etapa
         this.currentLessonIndex++;
-    
-        // Ainda existem etapas
+
         if (this.currentLessonIndex < this.lessons.length) {
-    
-            // Esconde tela de próximo nível
             this.nextLevelScreen.style.display = 'none';
-    
-            // Carrega próxima etapa
+            this.starsContainer.innerHTML = '';
+            this.confettiContainer.innerHTML = '';
+            this.nextBtn.disabled = false;
             this.startLesson(this.currentLessonIndex);
             return;
         }
-    
-        // =============================
-        //        FIM DO JOGO
-        // =============================
+
+        // Fim do jogo
         this.nextLevelScreen.innerHTML = `
             <h2>🎓 PARABÉNS, VOCÊ COMPLETOU TODAS AS ETAPAS!</h2>
             <p>Pontuação final: <strong>${this.score}</strong> pontos</p>
-    
-            <p id="saveStatus" style="font-weight: bold; margin-top: 15px; color: #3b82f6;">
-                Salvando sua pontuação...
-            </p>
-    
             <button id="restartBtn" class="btn btn-primary">Jogar Novamente</button>
             <a href="ranking.html" class="btn" style="margin-top: 10px;">Ver Ranking</a>
         `;
-    
         this.nextLevelScreen.style.display = "flex";
-    
-        // =============================
-        //     SALVAR PONTUAÇÃO
-        // =============================
-        fetch("https://app-n5wahuji6a-uc.a.run.app/api/salvar-pontuacao", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                nome: localStorage.getItem("usuario") || "Jogador",
-                pontuacao: this.score
-            })
-        })
-        .then(res => res.json())
-        .then(data => {
-            document.getElementById("saveStatus").innerText = "✔ Pontuação salva com sucesso!";
-            document.getElementById("saveStatus").style.color = "green";
-        })
-        .catch(err => {
-            document.getElementById("saveStatus").innerText = "❌ Erro ao salvar pontuação.";
-            document.getElementById("saveStatus").style.color = "red";
-        });
-    
-        // Reiniciar
-        document.getElementById("restartBtn").addEventListener("click", () => {
-            window.location.reload();
-        });
+
+        const restart = document.getElementById("restartBtn");
+        if (restart) restart.addEventListener("click", () => location.reload());
+
+    } catch (e) {
+        console.error("Erro em nextLesson:", e);
+        alert("Não foi possível salvar sua pontuação. Tente novamente.");
+        this.nextBtn.disabled = false;
     }
-}
     
+}
+}
 
 // Inicializa o jogo quando a página carrega
 document.addEventListener('DOMContentLoaded', () => {

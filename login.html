@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | OceanConnect</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+  <a href="1 Home.html" class="back-link">←Volte para o site</a>
+
+  <div class="welcome">
+    <h1>Bem vindo de volta</h1>
+    <p>Junte-se a nós novamente e ajude a proteger os oceanos.</p>
+  </div>
+
+  <div class="login-card">
+    <h2>Faça seu login</h2>
+    <p>Entre para continuar sua jornada.</p>
+
+    <form id="form-login">
+      <div class="input-group">
+        <input type="email" id="email-login" class="input-field" placeholder="Digite seu e-mail" required />
+        <span class="icon email-icon">✉️</span>
+      </div>
+
+      <div class="input-group">
+        <input type="password" id="senha-login" class="input-field" placeholder="Digite sua senha" required />
+        <span class="icon password-icon">🔒</span>
+      </div>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="salvar-senha" class="custom-checkbox" />
+        <label for="salvar-senha">Salvar senha</label>
+        <a href="#" class="forgot-password" id="esqueceu-senha">Esqueceu sua senha?</a>
+      </div>
+
+      <button type="submit" class="btn btn-entrar">Entrar</button>
+    </form>
+
+    <p id="login-erro" style="margin-top: 10px; color: red; text-align: center;"></p>
+
+    <div class="signup">
+      Ainda não tem uma conta? <a href="cadastro.html" class="signup-link">Cadastre-se agora!</a>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
