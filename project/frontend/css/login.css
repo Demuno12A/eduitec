@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+   
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #06202C;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* ----- LADO ESQUERDO ----- */
+
+.left-side {  background-image: url('/imagens/login\ e\ cadastro.webp');
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.left-text {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    color: white;
+}
+
+.left-text h1 {
+    font-size: 38px;
+    font-weight: 700;
+    max-width: 350px;
+}
+
+.left-text p {
+    font-size: 18px;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* ----- LADO DIREITO ----- */
+
+.right-side {
+    width: 50%;
+    background-color: #06202C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: #F3F3F3;
+    padding: 45px;
+    width: 420px;
+    border-radius: 35px;
+    box-shadow: 0 0 20px #0004;
+}
+
+.card h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #000;
+}
+.card p {
+    font-size: 20px;
+    margin-top: 70px;
+    opacity: 0.9;
+}
+/* Inputs */
+
+.input-group {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 50px 15px 15px;
+    border: none;
+    border-radius: 15px;
+    background-color: #DADADA;
+    font-size: 15px;
+}
+
+.input-group .icon {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #444;
+}
+
+/* Botão */
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    background: #00293C;
+    color: white;
+    border: none;
+    font-size: 17px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Link inferior */
+
+.small-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.small-text a {
+    color: #003B60;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.small-text a:hover {
+    text-decoration: underline;
+}
+
+/* Erro */
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jogo educativo de biologia marinha — arraste cartas para ensinar peixinhos!">
+    <title>🃏 Jogo de Cartas Marinhas</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <!-- ADICIONADO -->
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="css/jogo3.css">
+    <link rel="icon" type="image/png" href="./imagens/Logo.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="1 Home.html">
+                <img src="./imagens/Logo.png" alt="Logo" class="logo">
+            </a>
+            <ul class="nav-links">
+
+                <li><a href="2 O que é Biologia Marinha .html">O QUE É BIOLOGIA MARINHA</a></li>
+                <li><a href="3 Curiosidades .html">CURIOSIDADES</a></li>
+                <li><a href="4 Quem Somos.html" class="active">QUEM SOMOS</a></li>
+                <li><a href="6 Inicio Jogos.html">JOGOS</a></li> 
+        </ul>
+    </nav>
+
+
+
+    <div class="ocean-bg" aria-hidden="true">
+        <div id="bubbles"></div>
+        <div class="seaweed" style="--delay: 0s;"></div>
+        <div class="seaweed" style="--delay: 1s;"></div>
+        <div class="seaweed" style="--delay: 2s;"></div>
+        <div class="seaweed" style="--delay: 3s;"></div>
+    </div>
+
+    <main class="game-container" role="main">
+        <header class="game-header">
+            <h1 class="game-title">🃏 JOGO DE CARTAS MARINHAS</h1>
+            <p class="subtitle">Ensine os peixinhos arrastando a resposta certa!</p>
+            <div class="score">⭐ Pontos: <span id="score">0</span></div>
+        </header>
+
+        <div class="game-area">
+            <div class="students" id="students" aria-live="polite">
+                <!-- Gerado por JS -->
+            </div>
+
+            <div class="answers" id="answers" aria-label="Cartões de resposta">
+                <!-- Gerado por JS -->
+            </div>
+        </div>
+
+        <div class="next-level" id="nextLevel" role="alertdialog" aria-labelledby="next-level-title">
+            <h2 id="next-level-title">ETAPA COMPLETA!</h2>
+            <div class="stars" id="stars"></div>
+            <p>Você avançou para a próxima etapa!</p>
+            <button id="nextBtn" class="btn btn-primary">Avançar →</button>
+        </div>
+
+        <div class="confetti" id="confetti" aria-hidden="true"></div>
+    </main>
+
+    <script src="js/jogo3.js" defer></script>
+</body>
+</html>
