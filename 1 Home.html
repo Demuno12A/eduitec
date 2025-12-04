@@ -36,17 +36,6 @@
         </div>
     </nav>
     
-<!-- Menu do usuário -->
-<div id="usuario-menu" class="usuario-menu" style="display:none; position: relative;">
-    <img id="foto-usuario-home" src="default-avatar.png" alt="Foto do Usuário" style="width:40px; height:40px; border-radius:50%; cursor:pointer;">
-    <div id="menu-dropdown" style="display:none; position:absolute; top:50px; right:0; background:#fff; border:1px solid #ddd; border-radius:5px; padding:10px; box-shadow:0 0 5px rgba(0,0,0,0.1);">
-        <p id="nome-usuario-home"></p>
-        <p id="email-usuario-home"></p>
-        <a href="perfil.html">Ver Perfil</a><br>
-        <button id="btn-logout">Sair</button>
-    </div>
-</div>
-
 
     <main>
         <h1 class="eco-marine">ECO MARINE</h1>
@@ -88,37 +77,6 @@
             <p>&copy; 2025 EcoMarinha | Educação e Conservação Marinha</p>
         </div>
     </footer>
-      
-      <div id="user-card" class="user-card" style="display:none;">
-        <img src="./imagens/Card Golfinho.jpg" class="user-photo">
-        
-        <div class="user-info">
-            <span id="user-name">Usuário</span>
-            <span id="user-email">email@email.com</span>
-        </div>
-    
-        <span class="arrow">▼</span>
-    </div>
-    <<script>
-        document.addEventListener("DOMContentLoaded", () => {
-            let usuario = null;
-        
-            // tentar pegar do sessionStorage (onde o cadastro salva)
-            if (sessionStorage.getItem("usuarioLogado")) {
-                usuario = JSON.parse(sessionStorage.getItem("usuarioLogado"));
-            }
-        
-            if (!usuario) return; // não logado → não mostra nada
-        
-            // mostrar card
-            const card = document.getElementById("user-card");
-            card.style.display = "flex";
-        
-            document.getElementById("user-name").textContent = usuario.nome;
-            document.getElementById("user-email").textContent = usuario.email;
-        });
-        </script>
-        
         
 
 </body>

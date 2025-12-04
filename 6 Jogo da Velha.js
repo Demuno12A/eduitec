@@ -17,6 +17,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // --- Função para salvar pontuação no backend ---
+    async function saveScoreToBackend(playerName, score) {
+        try {
+            const response = await fetch('https://us-central1-default-59bd9.cloudfunctions.net/api', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    playerName: playerName,
+                    score: score
+                })
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+                console.log("✅ Pontuação salva:", result.message);
+                alert("🎉 Pontuação salva com sucesso!");
+            } else {
+                console.error("❌ Erro ao salvar:", result.error);
+                alert("⚠️ Erro ao salvar pontuação: " + result.error);
+            }
+        } catch (error) {
+            console.error("🚨 Erro de conexão:", error);
+            alert("🚨 Falha na conexão com o servidor.");
+        }
+    }
+
     // --- Jogo da Velha ---
     let currentPlayer = 'polvo';
     let gameActive = true;
@@ -131,9 +159,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentPlayer === 'polvo') {
                 polvoScore++;
                 scorePolvo.textContent = polvoScore;
+                // ✅ Envia pontuação para o backend
+                saveScoreToBackend("Polvo", polvoScore);
             } else {
                 peixeScore++;
                 scorePeixe.textContent = peixeScore;
+                // ✅ Envia pontuação para o backend
+                saveScoreToBackend("Peixe", peixeScore);
             }
             return;
         }
